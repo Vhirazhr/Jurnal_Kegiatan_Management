@@ -13,9 +13,10 @@ class CreateAgendasTable extends Migration
             $table->string('nama_kegiatan');
             $table->date('tanggal');
             $table->text('deskripsi');
-            $table->string('foto')->nullable();
+            $table->json('foto')->nullable(); // Untuk banyak foto
             $table->string('penanggung_jawab');
             $table->string('keterangan');
+            $table->string('jabatan'); // Kolom untuk jabatan
             $table->timestamps();
         });
     }

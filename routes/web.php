@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AgendaController;
 
 Route::get('/', function () {
-    return view('welcome'); // Halaman landing
-});
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/agenda/create', [AgendaController::class, 'create'])->name('agenda.create');
 Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda.index');
